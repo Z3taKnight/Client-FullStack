@@ -16,6 +16,7 @@ const userscontroller=require('./controllers/userscontroller')
 const cartcontroller=require('./controllers/cartcontroller')
 const manufacturercontroller=require('./controllers/manufacturercontroller')
 const suppliercontroller=require('./controllers/suppliercontroller')
+//---------------Users--------------------//
 app.get('/users', userscontroller.getUsers)
 app.get('/users/:id', userscontroller.getUsersById)
 app.post('/users',userscontroller.addUsers)
