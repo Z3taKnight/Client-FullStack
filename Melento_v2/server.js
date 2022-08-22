@@ -43,4 +43,5 @@ app.get('/suppliers', suppliercontroller.listSuppliers)
 app.post('/suppliers', suppliercontroller.addSuppliers)
 app.put('/suppliers/:id',suppliercontroller.updateSuppliers)
 app.delete('/suppliers/:id',suppliercontroller.deleteSuppliers)
+//------------------Port---------------------------//
 app.listen(port, () => console.log(`Server listening on port ${port}`))
