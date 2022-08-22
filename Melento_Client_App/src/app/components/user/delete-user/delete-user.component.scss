@@ -1,0 +1,29 @@
+.custom{
+    width: 60%;
+}
+.form-row{
+    margin-top: 20px;
+}
+input{
+    margin-top: 10px;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #77a6f7;
+    background: none;
+}
+label{
+    color: grey;
+}
+button{
+    margin-top: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+select{
+    background-color: #77a6f7;
+    border: 1px solid #77a6f7;
+    color: #fff;
+}

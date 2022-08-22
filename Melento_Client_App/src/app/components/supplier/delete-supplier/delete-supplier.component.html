@@ -1,0 +1,23 @@
+<div class="container mt-4 "> 
+    <div class="table-responsive-md">           
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Supplier_ID</th>
+            <th>Supplier Name</th>
+            <th colspan="2">Location</th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr *ngFor ='let s of supplierArr'>
+            <td data-label="Supplier_ID:">{{s._id}}</td>
+            <td data-label="Supplier Name:">{{s.sName}}</td>
+            <td data-label="Location:">{{s.sLocation}}</td>
+            <!--<td><button class="btn btn-primary" (click)="displaySupplierDetails(s.id)"> More Details</button></td>-->
+           <td><button class="btn btn-primary" (click)="deleteSupplier(s._id)">Delete</button></td>
+          </tr>
+        </tbody>
+    </table>
+    </div>
+  </div>
+  

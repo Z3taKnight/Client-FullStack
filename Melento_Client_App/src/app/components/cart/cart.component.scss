@@ -1,0 +1,111 @@
+.heading{
+    font-weight: lighter;
+    text-align: center;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 10px 20px -6px rgba(0,0,0,0.12);
+  }
+.zoom {
+    transition: transform .2s; 
+}
+  
+.zoom:hover {
+    transform: scale(1.01);
+}
+.left ul{
+    float: left;
+    line-height: 500%;
+}
+.right{
+    float: right;
+    line-height: 500%;
+}
+ul{
+    list-style-type: none;
+    
+}
+/////////Button//////////////
+  @mixin transition($transition) {
+    -moz-transition: all $transition ease;
+    -o-transition: all $transition ease;
+    -webkit-transition: all $transition ease;
+    -ms-transition: all $transition ease;
+    transition: all $transition ease;
+  }
+  $primary: #77a6f6;
+  $white: #ffffff;
+  $secondary: #00887a;
+  button{
+      font-family: 'Space Grotesk', sans-serif;
+      transition: .3s all ease;
+      &:hover, &:focus {
+          text-decoration: none !important;
+          outline: none !important;
+          box-shadow: none !important;
+      }
+  }  
+  .btn {
+      padding: 12px 16px;
+      cursor: pointer;
+      border-width: 1px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 500;
+      -webkit-box-shadow: 0px 10px 20px -6px rgba(0,0,0,0.12);
+      -moz-box-shadow: 0px 10px 20px -6px rgba(0,0,0,0.12);
+      box-shadow: 0px 10px 20px -6px rgba(0,0,0,0.12);
+      overflow: hidden;
+      position: relative;
+      &.btn-primary {
+          background: $primary;
+          border-color: $primary;
+          color: $white;
+          &:hover,&:focus{
+              border-color: darken($primary,10%) !important;
+              background: darken($primary,10%) !important;
+          }
+          &.btn-link{
+              background: transparent;
+              color: $white;
+              border:none;
+              box-shadow: none;
+          }
+          .icon{
+              i{
+                  color: $primary;
+              }
+          }
+      }
+      &.btn-outline-primary{
+          color: $primary;
+          border-color: $primary;
+          &:hover, &:focus{
+              color: $white;
+              background: $primary;
+          }
+      }
+      &.btn-secondary{
+		color: $white;
+		border-color: $secondary;
+		background: $secondary;
+		&:hover,&:focus{
+			border-color: darken($secondary,10%) !important;
+			background: darken($secondary,10%) !important;
+		}
+		&.btn-link{
+			color: $secondary;
+			background: transparent;
+		}
+		.icon{
+			i{
+				color: $secondary;
+			}
+		}
+	}
+    &.btn-round{
+		border-radius:40px;
+	}
+  
+  }

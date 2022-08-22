@@ -1,0 +1,55 @@
+#button-addon1 {
+    color: #ffc371;
+  }
+  
+  i {
+    color: #ffffff;
+  }
+  
+  .form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+  }
+  
+.form-control.shadow-0:focus {
+    box-shadow: none;
+  }
+footer{
+    background-color: #77a6f4;
+    color:white;
+}
+.text-muted{
+    color: white;
+}
+h6{
+    color: white;
+}
+p{
+    color: white;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.fa{
+    font-size: medium;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+.socialMeidaIcons{
+    font-size: medium;
+}
+.socialIconsDiv{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+// @media only screen and (max-width: 991px){
+//     .flex{
+//         display: flex;
+//     flex-direction: column;
+//     }
+// }

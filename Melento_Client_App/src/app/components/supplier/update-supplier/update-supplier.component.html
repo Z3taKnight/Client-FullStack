@@ -1,0 +1,58 @@
+<div class="container">
+    <!--<form [formGroup]="supplierForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label class="form-label" for="id"> Select Supplier for Update:</label>
+            <select class="form-select" id="id" formControlName="id" (change)="onChangeType($event,$event.target)" >
+                <option selected>Select a value</option>
+                <option *ngFor="let s of supplierArr" [ngValue]="s.id">{{s.sName}}</option>
+            </select>
+        </div>
+    </form>-->
+<div class="container-fluid">
+    <form [formGroup]="supplierForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label class="form-label" for="id"> Select Supplier for Update:</label>
+            <select class="form-select" id="id" formControlName="id" (change)="onChangeType($event,$event.target)" >
+                <option selected>Select a value</option>
+                <option *ngFor="let s of supplierArr" [ngValue]="s._id">{{s.sName}}</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label for="sName"> Supplier Name: </label>
+            <input id='sName' type="text" class="form-control" formControlName="sName" [ngClass]="{ 'is-invalid': submitted && f['sLocation'].errors }">
+            <div *ngIf="submitted && f['sName'].errors" class="invalid-feedback">
+            <div *ngIf="f['sName'].errors['required']">Supplier Name is required</div>
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="sLocation"> Location: </label>
+            <input id='sLocation' type="text" class="form-control" formControlName="sLocation" [ngClass]="{ 'is-invalid': submitted && f['sLocation'].errors }">
+            <div *ngIf="submitted && f['sLocation'].errors" class="invalid-feedback">
+            <div *ngIf="f['sLocation'].errors['required']">Supplier Location is required</div>
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="sContact"> Contact: </label>
+            <input id='sContact' type="text" class="form-control" formControlName="sContact" [ngClass]="{ 'is-invalid': submitted && f['sLocation'].errors }">
+            <div *ngIf="submitted && f['sContact'].errors" class="invalid-feedback">
+            <div *ngIf="f['sContact'].errors['required']">Supplier Contact is required</div>
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="sEmail"> Email Id: </label>
+            <input id='sEmail' type="text" class="form-control" formControlName="sEmail" [ngClass]="{ 'is-invalid': submitted && f['sLocation'].errors }">
+            <div *ngIf="submitted && f['sEmail'].errors" class="invalid-feedback">
+            <div *ngIf="f['sEmail'].errors['required']">Supplier Email id is required</div>
+            </div>
+        </div>
+        <!--<div class="form-row">
+            <label for="manufacture_id">Manufacture_Id: </label>
+            <input id='manufacture_id' type="text" class="form-control" formControlName="manufacture_id" [ngClass]="{ 'is-invalid': submitted && f['sLocation'].errors }">
+            <div *ngIf="submitted && f['manufacture_id'].errors" class="invalid-feedback">
+            <div *ngIf="f['manufacture_id'].errors['required']"> Manufacture_Id is required</div>
+            </div>
+        </div>-->
+        <br>
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</div>

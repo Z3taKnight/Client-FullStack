@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <form [formGroup]="supplierForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+            <label for="sName"> Supplier Name: </label>
+            <input id='sName' type="text" class="form-control" formControlName="sName" [ngClass]="{ 'is-invalid': submitted && f['sName'].errors }">
+            <div *ngIf="submitted && f['sName'].errors" class="invalid-feedback">
+            <div *ngIf="f['sName'].errors['required']">Supplier Name is required</div>
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="sLocation"> Location: </label>
+            <input id='sLocation' type="text" class="form-control" formControlName="sLocation" [ngClass]="{ 'is-invalid': submitted && f['sLocation'].errors }">
+            <div *ngIf="submitted && f['sLocation'].errors" class="invalid-feedback">
+            <div *ngIf="f['sLocation'].errors['required']">Supplier Location is required</div>
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="sContact"> Contact: </label>
+            <input id='sContact' type="text" class="form-control" formControlName="sContact" [ngClass]="{ 'is-invalid': submitted && f['sContact'].errors }">
+            <div *ngIf="submitted && f['sContact'].errors" class="invalid-feedback">
+            <div *ngIf="f['sContact'].errors['required']">Supplier Contact is required</div>
+            </div>
+        </div>
+        <div class="form-row">
+            <label for="sEmail"> Email Id: </label>
+            <input id='sEmail' type="email" class="form-control" formControlName="sEmail" [ngClass]="{ 'is-invalid': submitted && f['sEmail'].errors }">
+            <div *ngIf="submitted && f['sEmail'].errors" class="invalid-feedback">
+            <div *ngIf="f['sEmail'].errors['required']">Supplier Email id is required</div>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</div>

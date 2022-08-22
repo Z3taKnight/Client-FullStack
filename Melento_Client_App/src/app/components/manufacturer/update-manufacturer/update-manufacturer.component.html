@@ -1,0 +1,53 @@
+<div class="container custom">
+    <form [formGroup]="manufacturerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label class="form-label" for="id"> Select a manufacturer for Update:</label>
+            <select class="form-select" id="id" formControlName="id" (change)="onChangeType($event,$event.target)" >
+                <option selected>Select a value</option>
+                <option *ngFor="let p of manufacturersArr" [ngValue]="p._id">{{p.mName}}</option>
+            </select>
+        </div>
+        </form>
+    <form [formGroup]="manufacturerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <div class="form-row">
+                <label for="mName"> Manufacturer Name: </label>
+                <input id='mName' type="text" class="form-control" formControlName="mName" [ngClass]="{ 'is-invalid': submitted && f['mName'].errors }">
+                <div *ngIf="submitted && f['mName'].errors" class="invalid-feedback">
+                <div *ngIf="f['mName'].errors['required']">Manufacturer name is required</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="loc"> Location: </label>
+                <input id='loc' type="text" class="form-control" formControlName="loc" [ngClass]="{ 'is-invalid': submitted && f['loc'].errors }">
+                <div *ngIf="submitted && f['loc'].errors" class="invalid-feedback">
+                <div *ngIf="f['loc'].errors['required']">Location is required</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="phn"> Phone Number: </label>
+                <input id='phn' type="number" class="form-control" formControlName="phn" [ngClass]="{ 'is-invalid': submitted && f['phn'].errors }">
+                <div *ngIf="submitted && f['phn'].errors" class="invalid-feedback">
+                <div *ngIf="f['phn'].errors['required']">Phone number is required</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="pointOfContact"> Point Of Contact: </label>
+                <input id='pointOfContact' type="text" class="form-control" formControlName="pointOfContact" [ngClass]="{ 'is-invalid': submitted && f['pointOfContact'].errors }">
+                <div *ngIf="submitted && f['pointOfContact'].errors" class="invalid-feedback">
+                <div *ngIf="f['pointOfContact'].errors['required']">Point of contact is required</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="email"> Email: </label>
+                <input id='email' type="text" class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }">
+                <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                <div *ngIf="f['email'].errors['required']">Email is required</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-primary align-self-center" (onclick)="onSubmit">Submit</button>
+    </form>
+</div>
+<br>

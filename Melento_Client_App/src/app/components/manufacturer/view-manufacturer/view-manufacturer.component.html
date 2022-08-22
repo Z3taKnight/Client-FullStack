@@ -1,0 +1,30 @@
+
+<div class="container mt-4">
+  <div class="table-responsive-md"> 
+    <table class="table table-hover" >
+      <thead>
+        <tr>
+          <th scope="col">Manufacturer Id</th>
+          <th scope="col">Manufacturer Name</th>
+          <th scope="col">Location</th>
+          <th scope="col">Phone Number</th>
+          <th scope="col">Point Of Contact</th>
+          <th scope="col">Email</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let m of manufacturersArr'>
+          <td data-label="Manufacturer ID:">{{m._id}}</td>
+            <td data-label="Manufacturer Name:">{{m.mName}}</td>
+            <td data-label="Location:">{{m.loc}}</td>
+            <td data-label="Phone:">{{m.phn}}</td>
+            <td data-label="Point Of Contact:">{{m.pointOfContact}}</td>
+            <td data-label="Email:">{{m.email}}</td>
+          <!-- <td><button class="btn btn-primary"  (click)="displayManufacturerDetails(m._id)">More Details</button></td> -->
+          <!-- <td><button class="btn btn-primary" [style.display]="display" (click)="deleteManufacturer(m)">Delete</button></td> -->
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>

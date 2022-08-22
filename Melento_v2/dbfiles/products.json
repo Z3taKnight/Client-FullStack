@@ -1,0 +1,115 @@
+[
+    {
+      "id": 101,
+
+      "pname": "Signia",
+      "pStyle": "Behind The Ear",
+
+      "price": "42990",
+      "contact": "08048959977",
+
+      "img_path": "https://5.imimg.com/data5/TestImages/YB/XE/EE/SELLER-6317077/signia-motion-sa-1px-500x500.jpg",
+      "email": "contact@earsolutions.in"
+    },
+    {
+      "id": 102,
+
+      "pname": "ReSound LiNX Quattro 9 Li-ion",
+      "pStyle": "Behind The Ear",
+
+      "price": "42990",
+      "contact": "08048959977",
+
+      "img_path": "https://letshearit.in/assets/iic.png",
+      "email": "letshearitclinic@gmail.com"
+    },
+    {
+      "id": 103,
+
+      "pname": "Phonak Marvel M-30R Enabled",
+      "pStyle": "Behind The Ear",
+
+      "price": "42990",
+      "contact": "08048606966",
+
+      "img_path": "https://5.imimg.com/data5/SELLER/Default/2020/9/FG/WW/PU/37053809/phonak-bte-hearing-aids-500x500.jpg",
+      "email": "support@letshearit.in"
+    },
+    {
+      "id": 104,
+
+      "pname": "Ear Ites Hearing Aid",
+      "pStyle": "Behind The Ear",
+
+      "price": "52990",
+      "contact": "08048371817",
+
+      "img_path": "https://4.imimg.com/data4/IW/IV/GLADMIN-7425830/ear-ites-hearing-aid-500x500.jpg",
+      "email": "contact@nessahearing.in"
+    },
+    {
+      "id": 105,
+
+      "pname": "Siemens RIC Styletto",
+      "pStyle": "Behind The Ear",
+
+      "price": "38990",
+      "contact": "09015116116",
+
+      "img_path": "https://4.imimg.com/data4/IW/IV/GLADMIN-7425830/ear-ites-hearing-aid-500x500.jpg",
+      "email": "contact@nessahearing.in"
+    },
+    {
+      "id": 106,
+      "pName": "V-85MCP Axon Hearing Aid",
+      "pStyle": "BTE",
+
+      "price": "599",
+      "contact": "0804898876",
+      "img_path": "assets/images/V85MCPAxonHearingAid.PNG",
+      "email": "contact@nessahearing.in"
+    },
+
+    {
+      "id": 107,
+      "pName": "Siemens Hearing Aid",
+      "pStyle": "BTE",
+
+      "price": 4500,
+      "contact": "0804571625",
+      "img_path": "assets/images/SiemensHearingAid.PNG",
+      "email": "letshearitclinic@gmail.com"
+    },
+    {
+      "id": 108,
+      "pName": "Paras Heaclthcare Hearing Aid",
+      "pStyle": "BTE",
+
+      "price": 650,
+      "contact": "0804730671",
+      "img_path": "assets/images/ParasHeaclthcareHearingAid.PNG",
+      "email": "contact@nessahearing.in"
+    },
+
+    {
+      "id": 109,
+      "pName": "Key2",
+      "pStyle": "BTE",
+
+      "price": "25999",
+      "contact": "0804740671",
+      "img_path": "assets/images/key.PNG",
+      "email": "letshearitclinic@gmail.com"
+    },
+    {
+      "id": 110,
+      "pName": "Siemens RC Signia Pure 2PX Hearing Aid",
+      "pStyle": "BTE",
+
+      "price": "49000",
+      "contact": "0804735681",
+      "img_path": "assets/images/SiemensRCSigniaPure2PX.PNG",
+      "email": "contact@nessahearing.in"
+    }
+  ]
+

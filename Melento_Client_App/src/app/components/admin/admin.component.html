@@ -1,0 +1,485 @@
+<div class="container" id="contents">
+  <br />
+  <h1>Admin Dashboard</h1>
+  <ul class="nav nav-pills mb-3 nav-justified" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="product-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#product"
+        type="button"
+        role="tab"
+        aria-controls="product"
+        aria-selected="true"
+      >
+      <i class="fa-brands fa-product-hunt"></i>
+        Product
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="suppliers-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#suppliers"
+        type="button"
+        role="tab"
+        aria-controls="suppliers"
+        aria-selected="false"
+        
+      >
+      <i class="fa-solid fa-truck-field"></i>
+        Suppliers
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="manufacturers-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#manufacturers"
+        type="button"
+        role="tab"
+        aria-controls="manufacturers"
+        aria-selected="false"
+      >
+      <i class="fa-solid fa-industry"></i>
+        Manufacturers
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="user-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#user"
+        type="button"
+        role="tab"
+        aria-controls="user"
+        aria-selected="false"
+      >
+      <i class="fa-solid fa-user"></i>
+        User
+      </button>
+    </li>
+  </ul>
+  <hr>
+  <div class="tab-content" id="myTabContent">
+    <div
+      class="tab-pane fade show active"
+      id="product"
+      role="tabpanel"
+      aria-labelledby="product-tab"
+    >
+      <ul class="nav nav-pills mb-3 nav-justified" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="viewProduct-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#viewProduct"
+                type="button"
+                role="tab"
+                aria-controls="viewProduct"
+                aria-selected="false"
+                (click)="viewProductClicked()"
+              >
+                View Product
+              </button>
+          </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="addProduct-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#addProduct"
+            type="button"
+            role="tab"
+            aria-controls="addProduct"
+            aria-selected="true"
+            (click)="addProductClicked()"
+          >
+            Add Product
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="updateProduct-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#updateProduct"
+            type="button"
+            role="tab"
+            aria-controls="updateProduct"
+            aria-selected="false"
+            (click)="updateProductClicked()"
+          >
+            Update Product
+          </button>
+        </li>
+       <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="deleteProduct-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#deleteProduct"
+            type="button"
+            role="tab"
+            aria-controls="deleteProduct"
+            aria-selected="false"
+            (click)="deleteProductClicked()"
+          >
+            Delete Product
+          </button>
+        </li> 
+      </ul>
+      <div class="tab-content" id="myTabContent">
+          <div
+        class="tab-pane fade show active"
+        id="viewProduct"
+        role="tabpanel"
+        aria-labelledby="viewProduct-tab"
+      >
+        <app-view-product *ngIf="productClicked=='viewProduct'"></app-view-product>
+      </div>
+        <div
+          class="tab-pane fade "
+          id="addProduct"
+          role="tabpanel"
+          aria-labelledby="addProduct-tab"
+        >
+          <app-add-product *ngIf="productClicked=='addProduct'"></app-add-product>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="updateProduct"
+          role="tabpanel"
+          aria-labelledby="updateProduct-tab"
+        >
+          <app-update-product *ngIf="productClicked=='updateProduct'"></app-update-product>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="deleteProduct"
+          role="tabpanel"
+          aria-labelledby="deleteProduct-tab"
+        >
+          <app-delete-product *ngIf="productClicked=='deleteProduct'"></app-delete-product>
+        </div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="suppliers"
+      role="tabpanel"
+      aria-labelledby="suppliers-tab"
+    >
+      <ul class="nav nav-pills mb-3 nav-justified" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="viewupplier-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#viewSupplier"
+                type="button"
+                role="tab"
+                aria-controls="viewSupplier"
+                aria-selected="false"
+                (click)="viewSupplierClicked()"
+              >
+                View Supplier
+              </button>
+          </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link "
+            id="addSupplier-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#addSupplier"
+            type="button"
+            role="tab"
+            aria-controls="addSupplier"
+            aria-selected="true"
+            (click)="addSupplierClicked()"
+          >
+            Add Supplier
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="updateSupplier-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#updateSupplier"
+            type="button"
+            role="tab"
+            aria-controls="updateSupplier"
+            aria-selected="false"
+            (click)="updateSupplierClicked()"
+          >
+            Update Supplier
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="updateSupplier-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#deleteSupplier"
+            type="button"
+            role="tab"
+            aria-controls="deleteSupplier"
+            aria-selected="false"
+            (click)="deleteSupplierClicked()"
+          >
+           Delete Supplier
+          </button>
+        </li>
+        
+      </ul>
+      <div class="tab-content" id="myTabContent">
+          <div
+          class="tab-pane fade show active"
+          id="viewSupplier"
+          role="tabpanel"
+          aria-labelledby="viewSupplier-tab"
+        >
+        <app-view-supplier *ngIf="supplierClicked=='viewSupplier'"></app-view-supplier>
+        </div>
+        <div
+          class="tab-pane fade "
+          id="addSupplier"
+          role="tabpanel"
+          aria-labelledby="addSupplier-tab"
+        >
+        <app-add-supplier *ngIf="supplierClicked=='addSupplier'"></app-add-supplier>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="updateSupplier"
+          role="tabpanel"
+          aria-labelledby="updateSupplier-tab"
+        >
+        <app-update-supplier *ngIf="supplierClicked=='updateSupplier'"></app-update-supplier>
+        </div>
+        <div
+        class="tab-pane fade"
+        id="deleteSupplier"
+        role="tabpanel"
+        aria-labelledby="deleteSupplier-tab"
+      >
+       <app-delete-supplier *ngIf="supplierClicked=='deleteSupplier'"></app-delete-supplier>
+      </div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="manufacturers"
+      role="tabpanel"
+      aria-labelledby="manufacturers-tab"
+    >
+      <ul class="nav nav-pills mb-3 nav-justified" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="viewmanufacturers-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#viewmanufacturers"
+                type="button"
+                role="tab"
+                aria-controls="viewmanufacturers"
+                aria-selected="false"
+                (click)="viewmanufacturerClicked()"
+              >
+                View Manufacturer
+              </button>
+            </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link "
+            id="addmanufacturers-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#addmanufacturers"
+            type="button"
+            role="tab"
+            aria-controls="addmanufacturers"
+            aria-selected="true"
+            (click)="addmanufacturerClicked()"
+          >
+            Add Manufacturer
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="updatemanufacturers-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#updatemanufacturers"
+            type="button"
+            role="tab"
+            aria-controls="updatemanufacturers"
+            aria-selected="false"
+            (click)="updatemanufacturerClicked()"
+          >
+            Update Manufacturer
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="deletemanufacturers-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#deletemanufacturers"
+            type="button"
+            role="tab"
+            aria-controls="deletemanufacturers"
+            aria-selected="false"
+            (click)="deletemanufacturerClicked()"
+          >
+           Delete Manufacturer
+          </button>
+        </li>
+       
+      </ul>
+      <div class="tab-content" id="myTabContent">
+      <div
+          class="tab-pane fade show active"
+          id="viewmanufacturers"
+          role="tabpanel"
+          aria-labelledby="viewmanufacturers-tab"
+        >
+         <app-view-manufacturer *ngIf="manufacturerClicked=='viewmanufacturer'"></app-view-manufacturer>
+        </div>
+        <div
+          class="tab-pane fade "
+          id="addmanufacturers"
+          role="tabpanel"
+          aria-labelledby="addmanufacturers-tab"
+        >
+        <app-add-manufacturer *ngIf="manufacturerClicked=='addmanufacturer'"></app-add-manufacturer>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="updatemanufacturers"
+          role="tabpanel"
+          aria-labelledby="updatemanufacturers-tab"
+        >
+         <app-update-manufacturer *ngIf="manufacturerClicked=='updatemanufacturer'"></app-update-manufacturer>
+        </div>
+      <div
+          class="tab-pane fade"
+          id="deletemanufacturers"
+          role="tabpanel"
+          aria-labelledby="deletemanufacturers-tab"
+        >
+         <app-delete-manufacturer *ngIf="manufacturerClicked=='deletemanufacturer'"></app-delete-manufacturer>
+      </div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="user"
+      role="tabpanel"
+      aria-labelledby="user-tab"
+    >
+      <ul class="nav nav-pills mb-3 nav-justified" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="viewUser-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#viewUser"
+            type="button"
+            role="tab"
+            aria-controls="viewUser"
+            aria-selected="true"
+            (click)="viewUserClicked()"
+          >
+            View User
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link "
+            id="addUser-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#addUser"
+            type="button"
+            role="tab"
+            aria-controls="addUser"
+            aria-selected="false"
+            (click)="addUserClicked()"
+          >
+            Add User
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="updateUser-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#updateUser"
+            type="button"
+            role="tab"
+            aria-controls="updateUser"
+            aria-selected="false"
+            (click)="updateUserClicked()"
+          >
+            Update User
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="deleteUser-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#deleteUser"
+            type="button"
+            role="tab"
+            aria-controls="deleteUser"
+            aria-selected="false"
+            (click)="deleteUserClicked()"
+          >
+            Delete User
+          </button>
+        </li>
+        
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="viewUser"
+          role="tabpanel"
+          aria-labelledby="viewUser-tab"
+        >
+         <app-view-user *ngIf="userClicked=='viewUser'"></app-view-user>
+        </div>
+        <div
+          class="tab-pane fade "
+          id="addUser"
+          role="tabpanel"
+          aria-labelledby="addUser-tab"
+        >
+          <app-add-user *ngIf="userClicked=='addUser'"></app-add-user>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="updateUser"
+          role="tabpanel"
+          aria-labelledby="updateUser-tab"
+        >
+        <app-update-user *ngIf="userClicked=='updateUser'"></app-update-user>
+        </div>
+        <div
+        class="tab-pane fade"
+        id="deleteUser"
+        role="tabpanel"
+        aria-labelledby="deleteUser-tab"
+      >
+       <app-delete-user *ngIf="userClicked=='deleteUser'"></app-delete-user>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

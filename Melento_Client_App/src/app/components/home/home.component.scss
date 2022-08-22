@@ -1,0 +1,198 @@
+$primary: #77a6f6;
+$white: #ffffff;
+button{
+    font-family: 'Space Grotesk', sans-serif;
+	transition: .3s all ease;
+	&:hover, &:focus {
+		text-decoration: none !important;
+		outline: none !important;
+		box-shadow: none !important;
+	}
+}  
+.btn {
+	padding: 12px 16px;
+	cursor: pointer;
+	border-width: 1px;
+	border-radius: 5px;
+	font-size: 14px;
+	font-weight: 500;
+	-webkit-box-shadow: 0px 10px 20px -6px rgba(0,0,0,0.12);
+	-moz-box-shadow: 0px 10px 20px -6px rgba(0,0,0,0.12);
+	box-shadow: 0px 10px 20px -6px rgba(0,0,0,0.12);
+	overflow: hidden;
+	position: relative;
+	&.btn-primary {
+		background: $primary;
+		border-color: $primary;
+		color: $white;
+		&:hover,&:focus{
+			border-color: darken($primary,10%) !important;
+			background: darken($primary,10%) !important;
+		}
+		&.btn-link{
+			background: transparent;
+			color: $white;
+			border:none;
+			box-shadow: none;
+		}
+		.icon{
+			i{
+				color: $primary;
+			}
+		}
+	}
+	&.btn-outline-primary{
+		color: $primary;
+		border-color: $primary;
+		&:hover, &:focus{
+			color: $white;
+			background: $primary;
+		}
+	}
+
+}
+.card {
+    flex-direction: row;
+    align-items: center;
+  }
+  .card-title {
+    font-weight: bold;
+  }
+  .card img {
+    width: 30%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: calc(0.25rem - 1px);
+  }
+//////Main CSS/////
+// *{
+//     background-color: #F5F5F5;
+// }
+h1{
+    font-family: 'Yrsa', serif;
+    font-size: 300%;
+    color: #939393;
+}
+h3{
+    font-family: 'Radio Canada', sans-serif;
+}
+a{
+    font-family: 'Space Grotesk', sans-serif;
+}
+h5{
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 110%;
+}
+p{
+    font-family: 'Radio Canada', sans-serif;
+    font-weight: 400;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex-basis: 50%;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    animation-name: top-banner;
+    animation-duration: 2.4s;
+    position: relative;
+    align-items: center;
+    // background-color: #D3E3FC;
+}
+
+#main-img{
+    width: 50%;
+    border-radius: 2%;
+}
+#para{
+    padding-left: 3%;
+    padding-right: 3%;
+    text-align: left;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: small;
+	line-height: 276%;
+}
+.book-card{
+    padding-left: 2%;
+    
+}
+.card{
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+}
+.qual-table{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.table{
+    text-align: left;
+//     box-shadow:
+//   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+//   0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+//   0 12.5px 10px rgba(0, 0, 0, 0.06),
+//   0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+//   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+//   0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+
+th{
+    font-family: 'Roboto', sans-serif;
+}
+tr{
+    font-family: 'Ubuntu', sans-serif;
+    // font-family: 'Space Grotesk', sans-serif;
+}
+.zoom {
+    transition: transform .2s; 
+}
+  
+.zoom:hover {
+    transform: scale(1.05);
+}
+.zoom2 {
+    transition: transform .2s; 
+}
+  
+.zoom2:hover {
+    transform: scale(1.15);
+}
+@keyframes top-banner {
+    0% {top: 200px;}
+    100% { top: 0;}
+    
+}
+@media only screen and (max-width: 600px) {
+    html {
+        overflow-x: hidden; }
+    .flex-container{
+        flex-direction: column;
+        padding-top: 5%;
+        width: 100%;
+    }
+    #para{
+        line-height: 200%;
+    }
+    .qual-table{
+        padding-top: 5%;
+    }
+    .content{
+        padding-top: 5%;
+    }
+    .card{
+        border: 0;
+        box-shadow: none;
+    }
+    .table{
+        box-shadow: none;
+        width: 100%;
+    }
+    .card img {
+        width: 40%;
+      }
+}

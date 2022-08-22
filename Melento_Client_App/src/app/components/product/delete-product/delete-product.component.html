@@ -1,0 +1,34 @@
+<div class="container">
+    <h1 >Delete Product</h1>
+    <div class="table-responsive-sm">
+    <table class="table    ">
+      <thead>
+        <tr>
+          <th>Product_Id</th>
+          <th>Product Name</th>
+          <th>Style</th>
+          <th>Battery size</th>
+          <th>Remark</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of productArr">
+          <td data-label="Product_Id">{{p._id}}</td>
+          <td data-label="Product Name">{{p.pname}}</td>
+          <td data-label="Style">{{p.pStyle}}</td>
+          <td data-label="Battery size">{{p.pBattery}}</td>
+          <td data-label="Remark">{{p.pRemarks}}</td>
+          
+          <!-- <td><img src={{p.img_path}} alt=".."/></td> -->
+          <td><button type="submit" class="btn btn-primary" (click)="deleteproduct(p)">Delete</button></td>
+          <!-- <td><button type="submit" class="btn btn-success text-center">Add Cart</button></td> -->
+         
+        </tr>
+       
+         
+      
+    </table>
+  </div>
+  </div>
+  
+  

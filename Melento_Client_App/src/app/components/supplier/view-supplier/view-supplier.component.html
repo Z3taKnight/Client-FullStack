@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="container mt-4 ">    
+      <div class="table-responsive-md">      
+        <table class="table ">
+          <thead>
+            <tr>
+              <th>Supplier_ID</th>
+              <th>Supplier Name</th>
+              <th>Location</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+             <tr *ngFor ='let s of supplierArr'>
+              <td data-label="Supplier_ID:">{{s._id}}</td>
+              <td  data-label="Supplier Name:">{{s.sName}}</td>
+              <td  data-label="Location:">{{s.sLocation}}</td>
+              <!-- <td ><button class="btn btn-primary" (click)="displaySupplierDetails(s._id)"> More Details</button></td> -->
+             <td><button class="btn btn-primary" (click)="deleteSupplier(s._id)">Delete</button></td>
+            </tr>
+          </tbody>
+      </table>
+    </div> 
+    </div>
+    </div>
+    <!--<div id="whimsicaldiv" *ngIf="myFunc()">
+      I am a very whimsical division</div>-->
+    
+    

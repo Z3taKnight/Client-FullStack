@@ -1,0 +1,32 @@
+a{
+    text-decoration: none;
+  }
+  // #L-img{
+  // width:100%;
+  // height:24rem;
+  // }
+  img{
+    width:14rem;
+    height:14rem;
+  }
+  #links{
+   background-color: #ffff;
+    border-right: 5px solid #00887A;
+    border-left: 5px solid #00887A;
+    border-bottom: 2px solid #00887A;
+    border-top: 2px solid #00887A;
+  }
+  
+  
+  @media only screen and (min-width:767px) and(max-width:1369px){
+   img{
+     height:180px;
+     width:200px;
+   } 
+   #card{
+    width: 179px;
+    height:278px;
+   }
+  
+  }
+  

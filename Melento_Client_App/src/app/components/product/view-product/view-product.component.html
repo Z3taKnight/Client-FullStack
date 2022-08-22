@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="table-responsive-md">
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>Product_Id</th>
+          <th>Product Name</th>
+          <th>Style</th>
+          <th>Battery size</th>
+          <th>Remark</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of productArr">
+          <td data-label="Product_Id">{{p._id}}</td>
+          <td data-label="Product Name">{{p.pname}}</td>
+          <td data-label="Style">{{p.pStyle}}</td>
+          <td data-label="Battery size">{{p.pBattery}}</td>
+          <td data-label="Remark">{{p.pRemarks}}</td>
+          <td><button type="submit" class="btn btn-primary"> <a [routerLink]="['/singleProduct',p._id]"   class="text-white">More Details</a></button></td>
+          <td><button type="submit" class="btn btn-success text-center" (click)="addToCart(p._id)" >Add to Wishlist</button></td>
+         
+        </tr>
+       
+         
+      
+    </table>
+  </div>
+  </div>
+  

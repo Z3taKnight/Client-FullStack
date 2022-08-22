@@ -1,0 +1,90 @@
+<!-- <div class="container-fluid">
+    <h1>{{singlecart.uname}}'s Wishlist</h1>
+    <br>
+    <h1>Amount:  {{singlecart.amount}}</h1>
+    <div class="container-fluid">
+    <div class="container mt-4 "> 
+    <div class="table-responsive-md"> 
+      <table class="table">
+          <thead >
+              <tr>
+                  <th>Id</th><th>Product Name</th><th>Style</th><th>Battery Size</th><th>MRP</th><th>Image</th><th>Action</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor = 'let c of singlecart.products'>
+                  <th scope="row">{{c._id}}</th>
+                  <td>{{c.pname}}</td>
+                  <td>{{c.pStyle}}</td>
+                  <td>{{c.pBattery}}</td>
+                  <td>{{c.price}}</td>
+                  <td><img height="100" width="100" src="{{c.img_path}}" alt=""> </td>
+                  <td><button class="btn btn-primary" (click)="deleteProduct(singlecart,c._id)">Remove</button></td>
+              </tr>
+          </tbody>
+      </table>
+      </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="contianer heading">
+      <h1>{{singlecart.uname}}'s Wishlist</h1>
+  </div>
+  <br><br>
+  <div class="row">
+  <div class="container cart col-7">
+    <div>
+        <h2>Products</h2>
+    </div>
+    <br>
+    <div *ngFor = 'let c of singlecart.products' class="container zoom" style="padding: 2%;" >
+        <div class="flex-container card zoom border-0" style="cursor: pointer;">
+            <div class="container" [routerLink]="['/singleProduct',c._id]" style="align-self: center;">
+                <img src="{{c.img_path}}"  style="border-radius: 2%;">
+            </div>
+            <div class="container" style="align-self: center; flex-shrink: 1;" [routerLink]="['/singleProduct',c._id]">
+                <h3>{{c.pname}}</h3><br>
+                <h6>Style : <strong>{{c.pStyle}}</strong></h6><br>
+                <h6>Battery : <strong>{{c.pBattery}}</strong></h6>
+            </div>
+            <div class="container" style="align-self: center; text-align: center;" [routerLink]="['/singleProduct',c._id]">
+                <h3 style="color: black;"><strong>₹{{c.price}}</strong></h3>
+            </div>
+            <div class="contianer" style="align-self: center; padding-right: 5%;">
+                <button class="btn mb-2 mb-md-0 btn-secondary btn-block btn-round" (click)="deleteProduct(singlecart,c._id)">Remove</button>
+            </div>
+          </div>
+    </div>
+    <br>
+    <div class="conatiner" style="text-align: right;">
+        <button class="btn mb-3 mb-md-0 btn-primary btn-block btn-round">Add to Cart</button>
+    </div>
+    <br>
+  </div>
+  <div class="container col-3" >
+      <h2>Payment Summary</h2>
+      <br><br>
+      <div class="card border-0">
+        <div style="text-align: center; padding: 5%; background-color: rgba(245, 244, 243, 0.61); border-radius: 5%;">
+            <h3>{{singlecart.uemail}}</h3>
+        </div>
+        <div style="padding-right: 5%;">
+            <div class="left">
+                <ul>
+                    <li>Order</li>
+                    <li>Tax</li>
+                    <li>Total Amount</li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>₹{{singlecart.amount}}</li>
+                    <li>₹0</li>
+                    <li>₹{{singlecart.amount}}</li>
+                </ul>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+  <br><br>

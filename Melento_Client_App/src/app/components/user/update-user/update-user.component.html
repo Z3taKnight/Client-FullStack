@@ -1,0 +1,77 @@
+
+<div class="container custom">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label class="form-label" for="id"> Select a User for Update:</label>
+            <select class="form-select" id="id" formControlName="id" (change)="onChangeType($event,$event.target)" >      
+                <option selected>Select a User</option>
+                <option *ngFor="let u of userArr" [ngValue]="u._id">{{u.name}}</option>
+            </select>
+        </div>
+    </form>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <div class="form-row">
+                <label for="uName">Enter Name</label>
+                <input type="text" name="" id="uName" class="form-control" formControlName="uName" [ngClass]="{ 'is-invalid' :submitted && f['uName'].errors}">
+                <div *ngIf="submitted && f['uName'].errors" class="invalid-feedback">
+                    <div *ngIf="f['uName'].errors['required']" class="invalid-feedback">Name is required</div>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <label for="uEmail">Enter Email</label>
+                <input type="text" name="" id="uEmail" class="form-control" formControlName="uEmail" [ngClass]="{ 'is-invalid' :submitted && f['uEmail'].errors}">
+                <div *ngIf="submitted && f['uEmail'].errors" class="invalid-feedback">
+                    <div *ngIf="f['uEmail'].errors['required']" class="invalid-feedback">Email is required</div>
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <label for="uAge">Enter Age</label>
+                <input type="text" name="" id="uAge" class="form-control" formControlName="uAge" [ngClass]="{ 'is-invalid' :submitted && f['uAge'].errors}">
+                <div *ngIf="submitted && f['uAge'].errors" class="invalid-feedback">
+                    <div *ngIf="f['uAge'].errors['required']" class="invalid-feedback">Age is required</div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="uGender">Enter Gender</label>
+                <input type="text" name="" id="uGender" class="form-control" formControlName="uGender" [ngClass]="{ 'is-invalid' :submitted && f['uGender'].errors}">
+                <div *ngIf="submitted && f['uGender'].errors" class="invalid-feedback">
+                    <div *ngIf="f['uGender'].errors['required']" class="invalid-feedback">Gender is required</div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="uAdd">Enter Address</label>
+                <input type="text" name="" id="uAdd" class="form-control" formControlName="uAdd" [ngClass]="{ 'is-invalid' :submitted && f['uAdd'].errors}">
+                <div *ngIf="submitted && f['uAdd'].errors" class="invalid-feedback">
+                    <div *ngIf="f['uAdd'].errors['required']" class="invalid-feedback">Address is required</div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="uPass">Enter Password</label>
+                <input type="text" name="" id="uPass" class="form-control" formControlName="uPass" [ngClass]="{ 'is-invalid' :submitted && f['uPass'].errors}">
+                <div *ngIf="submitted && f['uPass'].errors" class="invalid-feedback">
+                    <div *ngIf="f['uPass'].errors['required']" class="invalid-feedback">Password is required</div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="uRole">Enter Role</label>
+                <input type="text" name="" id="uRole" class="form-control" formControlName="uRole" [ngClass]="{ 'is-invalid' :submitted && f['uRole'].errors}">
+                <div *ngIf="submitted && f['uRole'].errors" class="invalid-feedback">
+                    <div *ngIf="f['uRole'].errors['required']" class="invalid-feedback">Role is required</div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <button class="btn btn-primary align-self-center" (onclick)="onSubmit()">Submit</button>
+    </form>
+    <br>
+</div>

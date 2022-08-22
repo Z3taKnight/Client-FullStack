@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+<section>
+    <div class="container">
+        <div class="contactInfo">
+            <div>
+                <h2>Contact Info</h2>
+                  <div class="info">
+                      <div class="icon"></div>
+                      <div class="text">
+                          <h3><i class=" fa fa-map-marker"></i> Address</h3>
+                          <p>Hospital Location:No.10P & 12P, Whitefield Rd,<br> Varthur Kodi,Ramagondanahalli, Bengaluru, Karnataka<br> 560066</p>
+                      </div>
+                  </div>
+                  <div class="info">
+                      <div class="icon1"></div>
+                      <div class="text">
+                          <h3><i class="fa fa-phone" aria-hidden="true"></i> Phone</h3>
+                          <p>+91 8061656666 / +91 8033130333,+91 8884444330,+91 8067366795</p>
+                      </div>
+                  </div>
+                  <div class="info">
+                      <div class="icon"></div>
+                      <div class="text">
+                          <h3><i class="fa fa-envelope" aria-hidden="true"></i> Email</h3>
+                          <p>jyotirmay.h@columbiaindiahospitals.com | enthegde@gmail.com</p>
+                      </div>
+                  </div>
+            </div>
+        </div>
+        <div class="contactForm">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+              <h2>Send Message</h2>
+              <div class="formBox">
+                  <div class="inputBox w50">
+                      <span>Full Name:</span>
+                      <input id='name' type="text" class="form-control" formControlName="name" [ngClass]="{ 'is-invalid': submitted && f['name'].errors }">
+                      <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                      <div *ngIf="f['name'].errors['required']">Name is required</div>
+                      </div>
+                  </div>
+                  <div class="inputBox w50">
+                      <span>Email:</span>
+                      <input id='email' type="text" class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }">
+                      <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                      <div *ngIf="f['email'].errors['required']">Email is required</div>
+                      </div>
+                  </div>
+                  <div class="inputBox w100">
+                      <span>Type your text:</span>
+                      <textarea required="required" class="form-control" formControlName="text" [ngClass]="{ 'is-invalid': submitted && f['text'].errors }"></textarea>
+                      <div *ngIf="submitted && f['text'].errors" class="invalid-feedback">
+                      <div *ngIf="f['text'].errors['required']">Text is required</div>
+                      </div>
+                  </div>
+                  <div class="inputBox w100">
+                      <input type="submit" name="" value="SEND">
+                  </div>
+              </div>
+          </form>
+        </div>
+        
+    </div>
+    
+</section>  
+<div style="background: #d3e3fc;">
+<div class="row justify-content-center">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7776.472996090612!2d77.736579!3d12.956713!3m2!1i1024!2i768!4f13.1!4m3!3e6!4m0!4m0!5e0!3m2!1sen!2sin!4v1651758678657!5m2!1sen!2sin"  
+    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br>
+</div>
+<br>
+</div>
