@@ -30,6 +30,8 @@ app.delete('/cart/:id',cartcontroller.deleteCart)
 //--------------Products-----------------//
 app.get('/products', productscontroller.listProducts)
 app.get('/products/:id',productscontroller.getProductById)
+app.post('/products/',productscontroller.addProducts)
+app.delete('/products/:id',productscontroller.deleteProducts)
 //---------------Manufacturers----------//
 app.get('/manufacturers', manufacturercontroller.listManufacturer)
 app.post('/manufacturers', manufacturercontroller.addManufacturer)
